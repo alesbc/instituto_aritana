@@ -3,13 +3,20 @@
 O **Instituto Aritana Bot** é um agente de IA Generativa capaz de consultar o guia de programas, serviços e diretrizes acadêmicas do Instituto em tempo real e responder a dúvidas de famílias e educandos em linguagem natural via Telegram, utilizando arquitetura RAG (Retrieval-Augmented Generation) no n8n.
 
 <h2>📌 Sumário </h2>
-- Visão Geral  
-- Principais Funcionalidades  
-- Arquitetura da Solução  
+- Visão Geral
+
+- Principais Funcionalidades
+   
+- Arquitetura da Solução
+   
 - Tecnologias Utilizadas  
+
 - Como Executar o Projeto  
+
 - Evidências e Demonstração  
+
 - Deploy e Acesso ao Projeto  
+
 - Autor  
 
 
