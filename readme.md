@@ -130,4 +130,5 @@ Pré-requisitos
 Desenvolvido por Alexandre da Silva Cunha como parte do desafio prático ONE IA.
 
 LinkedIn: https://www.linkedin.com/in/alexandrescunha/
+
 GitHub: https://github.com/alesbc
