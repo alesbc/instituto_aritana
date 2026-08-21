@@ -2,7 +2,7 @@
 
 O **Instituto Aritana Bot** é um agente de IA Generativa capaz de consultar o guia de programas, serviços e diretrizes acadêmicas do Instituto em tempo real e responder a dúvidas de famílias e educandos em linguagem natural via Telegram, utilizando arquitetura RAG (Retrieval-Augmented Generation) no n8n.
 
-📌 Sumário
+<h2>📌 Sumário </h2>
 - Visão Geral  
 - Principais Funcionalidades  
 - Arquitetura da Solução  
@@ -14,13 +14,13 @@ O **Instituto Aritana Bot** é um agente de IA Generativa capaz de consultar o g
 
 
 
-🚀 Visão Geral
+<h2>🚀 Visão Geral</h2>
 
 O projeto consiste em um **sistema de atendimento autônomo focado em serviços socioassistenciais e educacionais**. A partir de uma base de conhecimento estruturada (PDF/CSV contendo o guia de programas do Instituto, com públicos-alvo, faixas etárias, horários, matriz de cursos profissionalizantes, documentos necessários, regras de frequência e políticas internas), o agente utiliza busca semântica para encontrar as informações mais adequadas à solicitação do usuário e formular respostas acolhedoras, alinhadas ao Sistema Preventivo Salesiano.
 
 
 
-🎯 Principais Funcionalidades
+<h2>🎯 Principais Funcionalidades</h2>
 
 - **Busca Semântica Completa**: Encontra o serviço ideal (CEI, CCA, Circo, CEDESP, SAICA, NCI, MSE) com base na idade, necessidade ou palavra-chave, retornando detalhes como horários de funcionamento, documentação exigida e pré-requisitos.
 - **Consulta à Matriz de Cursos e Oficinas**: Informa sobre os cursos profissionalizantes do CEDESP (Stop Motion, Assistente Administrativo, RH, Alfaiate) em todos os turnos, além da grade de oficinas do Circo Social (Capoeira, Teatro, Taekwondo, etc.).
@@ -31,7 +31,7 @@ O projeto consiste em um **sistema de atendimento autônomo focado em serviços 
 
 
 
-🏗️ Arquitetura da Solução
+<h2> 🏗️ Arquitetura da Solução </h2>
 
 O projeto é dividido em **dois workflows independentes no n8n** para otimizar o processamento e a manutenção:
 
@@ -45,13 +45,13 @@ O projeto é dividido em **dois workflows independentes no n8n** para otimizar o
                                                  [ Memória de Sessão ]
 ```
 
-### Workflow de Ingestão (Pipeline de Dados)
+<h2> Workflow de Ingestão (Pipeline de Dados) </h2>
 1. Lê a base de dados (arquivo `guia_ de_programas_e _servicos_ Instituto_aritana.pdf` contendo os dados estruturados).
 2. Formata os atributos e metadados enriquecidos (faixa etária, horários, cursos, documentos, regras) em texto contínuo via **Default Data Loader** do n8n.
 3. Vetoriza as informações usando o modelo **Cohere Embeddings** (`embed-multilingual-v3.0` para suporte ao português).
 4. Armazena as representações vetoriais no **Simple Vector Store** (LangChain/n8n).
 
-### Workflow do Agente Inteligente (Telegram & Atendimento)
+<h2> Workflow do Agente Inteligente (Telegram & Atendimento) </h2>
 1. Recebe e escuta as mensagens dos clientes via **Telegram Trigger**.
 2. Processa a intenção do usuário usando o LLM **Groq** (`openai/gpt-oss-120b`) para interpretação de linguagem natural e otimização de resposta.
 3. Consulta o **Simple Vector Store** via **Tool Calling (RAG)** para obter dados em tempo real sobre serviços, cursos ou regras.
@@ -60,7 +60,7 @@ O projeto é dividido em **dois workflows independentes no n8n** para otimizar o
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+<h2> 🛠️ Tecnologias Utilizadas </h2>
 
 - **Orquestração de Automação**: n8n (Deploy em nuvem via OCI ou Self-Hosted)
 - **Canal de Comunicação**: Telegram Bot API (ex: `@InstitutoAritanaBot`)
@@ -71,16 +71,16 @@ O projeto é dividido em **dois workflows independentes no n8n** para otimizar o
 
 ---
 
-## ⚙️ Como Executar o Projeto
+<h2> ⚙️ Como Executar o Projeto </h2>
 
-### Pré-requisitos
+Pré-requisitos
 - Instância do **n8n** (Local, Docker ou OCI).
 - **Chave de API da Groq** (acesso ao LLM).
 - **Chave de API da Cohere** (para geração de embeddings).
 - **Bot criado no Telegram** via @BotFather (Token de acesso).
 - Arquivo de dados: PDF do guia ou CSV estruturado com os campos: *Serviço, Público-alvo, Idade, Horário, Documentos, Cursos, Regras*.
 
-### Passo a Passo
+<h2>Passo a Passo</h2>
 
 1. **Importar os Workflows**:
    - Baixe os arquivos `.json` da pasta `workflows/` do repositório (um para Ingestão, outro para o Agente).
@@ -111,13 +111,13 @@ O projeto é dividido em **dois workflows independentes no n8n** para otimizar o
 
 ---
 
-## 📸 Evidências e Demonstração
+<h2> 📸 Evidências e Demonstração </h2>
 
 (Insira aqui capturas de tela do n8n mostrando a execução da Ingestão, o nó do Agente ativo, e prints da conversa no Telegram respondendo perguntas sobre os serviços do Instituto Aritana com base nos dados vetorizados.)
 
 ---
 
-## 🌐 Deploy e Acesso ao Projeto
+<h2> 🌐 Deploy e Acesso ao Projeto </h2>
 
 - **Workflows n8n**: Disponíveis no repositório oficial do projeto (pasta `/workflows`).
 - **Bot Telegram**: Disponível publicamente em [@InstitutoAritanaBot](https://t.me/InstitutoAritanaBot) (exemplo).
@@ -125,6 +125,9 @@ O projeto é dividido em **dois workflows independentes no n8n** para otimizar o
 
 ---
 
-## 👤 Autor
+<h2>👤 Autor </h2>
 
-**Instituto Aritana de São Paulo** – Transformando vidas há 45 anos com base no acolhimento, na educação e na cidadania, agora potencializado por Inteligência Artificial Generativa para democratizar o acesso à informação socioassistencial.
+Desenvolvido por Alexandre da Silva Cunha como parte do desafio prático ONE IA.
+
+LinkedIn: https://www.linkedin.com/in/alexandrescunha/
+GitHub: https://github.com/alesbc
