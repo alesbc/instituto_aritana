@@ -1,4 +1,4 @@
-Instituto Aritana - Agente Inteligente de Acolhimento e Serviços Sociais (RAG + n8n + Telegram)
+<h1> Instituto Aritana - Agente Inteligente de Acolhimento e Serviços Sociais (RAG + n8n + Telegram) </h1>
 
 O **Instituto Aritana Bot** é um agente de IA Generativa capaz de consultar o guia de programas, serviços e diretrizes acadêmicas do Instituto em tempo real e responder a dúvidas de famílias e educandos em linguagem natural via Telegram, utilizando arquitetura RAG (Retrieval-Augmented Generation) no n8n.
 
